@@ -22,7 +22,7 @@ Products.prototype.methodName = function(){
 }
 }
 
-var new Products('name');
+//var new Products('name');
 var product = new Products('name');
 var product2 = new Products('new name');
 allProducts.push(product);
