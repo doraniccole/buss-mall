@@ -1,51 +1,14 @@
 'use strict'
 
-var allProducts = [];
-product.allProducts= [];
+var productHistory = [];
+Products.allProducts= [];
 
-function Products(nameAsAParameter, imagePathAsAParameter) {
-    this.name='';
-    this.image='';
-    this.votes=0;
-    this.imagePathAsAParameter;
-    this.timesRendered=0;
-    this.previouslySeen=false;
-    this.name = nameAsAParameter;
-
-    //product.allProducts.push(this);
-    //instead
-    this.allProducts = [this];
-    
-    
-Products.prototype.methodName = function(){
-    console.log(this);
-}
-}
-
-//var new Products('name');
-var product = new Products('name');
-var product2 = new Products('new name');
-allProducts.push(product);
-
-var bag = new Products('bag', 'assets/bag.jpg');
-bag.votes += 1;
-
-var bathroom = new Products('bathroom', 'assets/bathroom.jpg');
-bathroom.votes += 1;
-
-
-//product.allProducts;
-//product2.allProducts;
-
-function Products(nameAsAParameter, imagePathAsAParameter) {
-    this.name = nameAsAParameter;
-    this.image = imagePathAsAParameter;
-    this.votes = 0;
-}
-
-Products.prototype.methodName = function () {
-
-}
+ function Products(nameAsAParameter, imagePathAsAParameter) {
+     this.name = nameAsAParameter;
+     this.image = imagePathAsAParameter;
+     this.votes = 0;
+     this.views = 0;
+ }
 
 //create 3 variables
  var img1 = document.getElementById('left');
@@ -75,34 +38,42 @@ Products.prototype.methodName = function () {
  
 
  bag.methodName(); //logs all properties of bag. {name, image, votes}
- var randomIndexValue = Math.floor(Math.random() * allProducts.length);
-
- for(var i = 0; i < allProducts.length; i++) {
-     //allProducts[i].image=> every image path that we've created
-     allProducts[i].votes += 1;
-     if (event.target.attributes[1].value === allProducts[i].image) {
-         allProducts[i].votes += 1;
-     };
-
+ function randomNumberGen() {
+     var randomIndexValue = Math.floor(Math.random() * allProducts.length);
+     return randomIndexValue;
  }
+//  for(var i = 0; i < allProducts.length; i++) {
+//      //allProducts[i].image=> every image path that we've created
+//      allProducts[i].votes += 1;
+//      if (event.target.attributes[1].value === allProducts[i].image) {
+//          allProducts[i].votes += 1;
+//      };
+
+//  }
  console.log(allProducts);
 
+ function renderProducts() {
  leftImg.src = [randomIndexValue].image;
- 
+ rightImg.src = [randomIndexValue].image;
+ centerImg.src =[randomIndexValue].image;
+
+ }
  function handleClick (
-     bag.votes
+    bag.votes
  ) //something
 
  leftImg.addEventListener('click', handleClick);
+ rightImg.addEventListener('click', handleClick);
+ centerImg.addEventListener('click', handleClick);
 
 
  //new notes
- roundsOfVoting -+= 1;
-  roundsOfVoting< 1) {
-     leftImg.style.display = 'none'
-     leftImg.removeEventListener('click', handleClick);
-     centerImg.removeEventListener('click', handleClick);
-
+  roundsOfVoting -+= 1;
+  roundsOfVoting < (1) {
+    leftImg.style.display = 'none'
+    leftImg.removeEventListener('click', handleClick);
+    centerImg.removeEventListener('click', handleClick);
+    rightImg.removeEventListener('click', handleClick);
  }
  //stinginfy
  //place in local storage

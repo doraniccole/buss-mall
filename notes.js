@@ -37,3 +37,37 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+// function Products(nameAsAParameter, imagePathAsAParameter) {
+//     this.name= name;
+//     this.image= image;
+//     this.votes=0;
+//    // this.imagePathAsAParameter;
+//     this.timesRendered=0;
+//     this.previouslySeen=false;
+//     this.name = nameAsAParameter;
+
+//     //product.allProducts.push(this);
+//     //instead
+//     this.allProducts = [this];
+
+
+// Products.prototype.methodName = function(){
+//     console.log(this);
+// }
+// }
+
+//var new Products('name');
+// var product = new Products('name');
+// var product2 = new Products('new name');
+// allProducts.push(product);
+
+// var bag = new Products('bag', 'img/bag.jpg');
+// bag.votes += 1;
+
+// var bathroom = new Products('bathroom', 'img/bathroom.jpg');
+// bathroom.votes += 1;
+
+
+//product.allProducts;
+//product2.allProducts;
