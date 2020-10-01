@@ -7,9 +7,9 @@ function Products(nameAsAParameter, imagePathAsAParameter) {
     this.name='';
     this.image='';
     this.votes=0;
-    this. = imagePathAsAParameter;
+    this.imagePathAsAParameter;
     this.timesRendered=0;
-    this.previoulySeen=false;
+    this.previouslySeen=false;
     this.name = nameAsAParameter;
 
     //product.allProducts.push(this);
@@ -22,7 +22,7 @@ Products.prototype.methodName = function(){
 }
 }
 
-var new Product ('name');
+var new Products('name');
 var product = new Products('name');
 var product2 = new Products('new name');
 allProducts.push(product);
@@ -53,38 +53,52 @@ Products.prototype.methodName = function () {
  var img3 = document.getElementById('right');
 
 
- var bag = new Products('bag, 'assets/bag.jpg');
- var banana = new Products('banana', 'assets/banana.jpg');
- var boots = new Products('boots, assets/boots.jpg');
- var breakfast = new Products('bathroom', 'assets/bathroom.jpg');
- var bubblegum = new Products('bubblegum', 'assets/bubblegum.jpg');
+ var bag = new Products('bag','img/bag.jpg');
+ var banana = new Products('banana','img/banana.jpg');
+ var boots = new Products('boots','img/boots.jpg');
+ var breakfast = new Products('bathroom','img/bathroom.jpg');
+ var bubblegum = new Products('bubblegum','img/bubblegum.jpg');
+ var chair = new Products('chair','img/chair.jpg');
+ var cthulhu = new Products('cthulhu','images/cthulhu');
+ var dogDuck = new Products('dog-duck','img/dog-duck.jpg');
+ var dragon = new Products('dragon','img/dragon.jpg');
+ var pen = new Products('pen','img/pen.jpg');
+ var petSweep = new Products('pet-sweep','img/pet-sweep.jpg');
+ var scissors = new Products('scissors', 'img/scissors.jpg');
+ var shark = new Products('shark', 'img/shark.jpg');
+ var sweep = new Products('sweep', 'img/sweep.png');
+ var tauntaun = new Products('tauntaun', 'tauntaun.jpg');
+ var unicorn = new Products('unicorn', 'img/unicorn.jpg');
+ var usb = new Products('usb', 'img/usb.gif');
+ var waterCan = new Products('water-can', 'img/water-can.jpg');
+ var wineGlass = new Products('wine-glass', 'img/wine-glass.jpg');
  
 
  bag.methodName(); //logs all properties of bag. {name, image, votes}
  var randomIndexValue = Math.floor(Math.random() * allProducts.length);
 
- for(var i = 0; i < allProducts.length; i++{
-     //allProducts[i].image=> every image pateh that we've created
+ for(var i = 0; i < allProducts.length; i++) {
+     //allProducts[i].image=> every image path that we've created
      allProducts[i].votes += 1;
-     if (event.target.attributes[1}.value === allProducts[i].image){
+     if (event.target.attributes[1].value === allProducts[i].image) {
          allProducts[i].votes += 1;
      };
 
  }
- console.log(allProducgs);
-}
+ console.log(allProducts);
+
  leftImg.src = [randomIndexValue].image;
  
- function handleClick {
+ function handleClick (
      bag.votes
- } //something
+ ) //something
 
- leftImg.addEventListener('click', hancleClick);
+ leftImg.addEventListener('click', handleClick);
 
 
  //new notes
  roundsOfVoting -+= 1;
-  roundOfVoting< 1) {
+  roundsOfVoting< 1) {
      leftImg.style.display = 'none'
      leftImg.removeEventListener('click', handleClick);
      centerImg.removeEventListener('click', handleClick);
