@@ -51,6 +51,7 @@ Products.allProducts= [];
 
 //  }
  console.log(allProducts);
+Products.allProducts.push(this);
 
  function renderProducts() {
  leftImg.src = [randomIndexValue].image;
@@ -58,9 +59,39 @@ Products.allProducts= [];
  centerImg.src =[randomIndexValue].image;
 
  }
- function handleClick (
-    bag.votes
- ) //something
+ var handleClick = function (event) {
+
+    var itemClicked = event.target.id;//left right center
+
+    if (itemClicked === leftImg.id || itemClicked === centerImg.id || itemClicked === rightImg.id) {
+        mallVotes++;
+
+        if (itemClicked === 'left') {
+            Products.allItems[leftImg].clicked++;
+        } else if (itemClicked === 'center') {
+            Products.allItems[centerImg].clicked++;
+        } else if (itemClicked === 'right') {
+            Products.allItems[rightImg].clicked++;
+        } else {
+            alert('You clicked incorrectly');
+        }
+    }
+    if (productVotes === totalRounds) {
+        itemParent.removeEventListener('click', handleClickOnItem);
+        alert('Thank you for your votes');
+
+        for (var i = 0; i < Products.allProducts.length; i++) {
+            var item = Products.allProducts[i];
+            console.log(`${product.name} received ${product.clicked} votes with ${product.views} views.`);
+        }
+    } else {
+        renderProducts();
+    }
+    // console.log('Product:', productClicked);
+    updateStorage();
+
+    console.log(event);
+}
 
  leftImg.addEventListener('click', handleClick);
  rightImg.addEventListener('click', handleClick);
