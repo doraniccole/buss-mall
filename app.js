@@ -37,7 +37,7 @@ Products.allProducts= [];
  var wineGlass = new Products('wine-glass', 'img/wine-glass.jpg');
  
 
- bag.methodName(); //logs all properties of bag. {name, image, votes}
+ //bag.randomNumberGen(); //logs all properties of bag. {name, image, votes}
  function randomNumberGen() {
      var randomIndexValue = Math.floor(Math.random() * allProducts.length);
      return randomIndexValue;
@@ -50,7 +50,7 @@ Products.allProducts= [];
 //      };
 
 //  }
- console.log(allProducts);
+ console.log(randomNumberGen);
 Products.allProducts.push(this);
 
  function renderProducts() {
@@ -99,8 +99,8 @@ Products.allProducts.push(this);
 
 
  //new notes
-  roundsOfVoting -+= 1;
-  roundsOfVoting < (1) {
+  roundsOfVoting - + 1;
+  roundsOfVoting < (1); {
     leftImg.style.display = 'none'
     leftImg.removeEventListener('click', handleClick);
     centerImg.removeEventListener('click', handleClick);
